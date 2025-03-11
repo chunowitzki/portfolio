@@ -12,8 +12,6 @@ $breakpoint arguement choices:
 
 Inside media queries 1em is always 16px i.e 1em = 16px at every screen size only inside media queries
 
-WHY DOES NESTING CSS CLASSES WORK HERE??????
-
 */
 
 * {
@@ -343,6 +341,7 @@ textarea {
   background: linear-gradient(to right, rgba(var(--main-color), 0.8), rgba(var(--main-color), 0.8)), url(../../assets/svg/common-bg.svg);
   background-size: cover;
   background-position: center; 
+  
 }
  
 
@@ -438,6 +437,7 @@ textarea {
           margin: 0; } }
 
 .header {
+  color: white;
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -582,7 +582,10 @@ textarea {
     font-size: 1.5rem;
     line-height: 1.7; }
   .main-footer__social-cont {
-    margin-top: 2rem; }
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    }
   .main-footer__icon {
     margin-right: 1rem;
     width: 2.5rem; }
