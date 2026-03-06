@@ -1,414 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Chunowitzki Portfolio</title>
-    <meta name="description" content="Portfolio Template for Developer" />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Morgan — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
 
-    <link rel="stylesheet" href="css/style.css" />
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">John Chun</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#works">Works</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__content">
-        <div class="header__logo-container">
-          <div class="header__logo-img-cont">
-            <img
-              src="./assets/img/2018-10-13_14-39-04_000.jpeg"
-              alt="Ram Maheshwari Logo Image"
-              class="header__logo-img"
-            />
-          </div>
-          <span class="header__logo-sub">John Chun</span>
-        </div>
-        <div class="header__main">
-          <ul class="header__links">
-            <li class="header__link-wrapper">
-              <a href="./index.html" class="header__link"> Home </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#projects" class="header__link">
-                Projects
-              </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#about" class="header__link">About </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#contact" class="header__link"> Contact </a>
-            </li>
-          </ul>
-          <div class="header__main-ham-menu-cont">
-            <img
-              src="./assets/svg/ham-menu.svg"
-              alt="hamburger menu"
-              class="header__main-ham-menu"
-            />
-            <img
-              src="./assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
-              class="header__main-ham-menu-close d-none"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="header__sm-menu">
-        <div class="header__sm-menu-content">
-          <ul class="header__sm-menu-links">
-            <li class="header__sm-menu-link">
-              <a href="./index.html"> Home </a>
-            </li>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-deco"></div>
+  <div class="hero-deco2"></div>
+  <div class="hero-deco3"></div>
+  <p class="hero-tag"> Fullstack Developer</p>
+  <h1><em>Building</em> and solving problems</h1>
+  <p class="hero-sub">I design and build thoughtful, end-to-end web apps, turning ideas into shippable products.</p>
+  <div class="hero-cta">
+    <a href="#works" class="btn-primary">View My Work</a>
+    <a href="#contact" class="btn-ghost">Get in Touch</a>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    Scroll
+  </div>
+</section>
 
-            <li class="header__sm-menu-link">
-              <a href="./index.html#about"> About </a>
-            </li>
-            
-            <li class="header__sm-menu-link">
-              <a href="./index.html#projects"> Projects </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./index.html#contact"> Contact </a>
-            </li>
-          </ul>
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div>
+      <p class="section-label reveal">About Me</p>
+      <h2 class="section-title reveal reveal-delay-1">A developer who<br>builds and solves problems</h2>
+      <div class="about-stats reveal reveal-delay-2">
+        <!-- <div class="stat-card">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Years Exp.</div>
         </div>
-      </div>
-    </header>
-    <section class="home-hero">
-      <div class="home-hero__content">
-        <h1 class="heading-primary">Hi, My name is John Chun</h1>
-        <div class="home-hero__info">
-          <p class="text-primary">
-            I am a passionate frontend developer based in Orange County, CA. My specialities are <strong>React JS</strong> and <strong>Tailwind CSS</strong>, and I love building apps that are fun and useful. 
-          </p>
+        <div class="stat-card">
+          <div class="stat-num">40+</div>
+          <div class="stat-label">Projects</div>
         </div>
-        <div class="home-hero__cta">
-          <a href="./#projects" class="btn btn--bg">See my projects</a>
-        </div>
-      </div>
-      <!-- <div class="home-hero__socials">
-        <div class="home-hero__social">
-          <a href="#" class="home-hero__social-icon-link">
-            <img
-              src="./assets/img/linkedin-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="#" class="home-hero__social-icon-link">
-            <img
-              src="./assets/img/github-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="#" class="home-hero__social-icon-link">
-            <img
-              src="./assets/img/twitter-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="#" class="home-hero__social-icon-link">
-            <img
-              src="./assets/img/yt-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a
-            href="#"
-            class="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
-          >
-            <img
-              src="./assets/img/insta-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
+        <div class="stat-card">
+          <div class="stat-num">18</div>
+          <div class="stat-label">Clients</div>
         </div>
       </div> -->
-      <div class="home-hero__mouse-scroll-cont">
-        <div class="mouse"></div>
-      </div>
-    </section>
-    
-    
-        <section id="projects" class="projects sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-bg">
-          <span class="heading-sec__main">Projects</span>
-          <span class="heading-sec__sub">
-            All my projects include links to the code and live version.
-          </span>
-        </h2>
-
-        <div class="projects__content">
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/img/chun-notes.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Notes App</h3>
-              <p class="projects__row-content-desc">
-                Notes app is a full-stack application that lets users create, view, update, and delete notes, with data stored in MongoDB. It’s built with React, Express, and Node.js, and styled using Tailwind CSS/DaisyUI.
-              </p>
-              <div class="project-details__links">
-                <h3 class="project-details__content-title">See Live</h3>
-                <a
-                  href="https://chun-notes-app.netlify.app/"
-                  class="btn btn--med btn--theme project-details__links-btn"
-                  target="_blank"
-                  >Live Link</a
-                >
-                <a
-                  href="https://github.com/chunowitzki/NOTES-APP"
-                  class="btn btn--med btn--theme-inv project-details__links-btn"
-                  target="_blank"
-                  >Code Link</a
-                >
-              </div>
-            </div>
-          </div>
-
-        <div class="projects__content">
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/img/movies-img.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Movies App</h3>
-              <p class="projects__row-content-desc">
-                Movies App is a simple movie searching app that lets you add movies to a watchlist. It's built with functional React components. 
-              </p>
-              <div class="project-details__links">
-                <h3 class="project-details__content-title">See Live</h3>
-                <a
-                  href="https://chunowitzki-movies.netlify.app/"
-                  class="btn btn--med btn--theme project-details__links-btn"
-                  target="_blank"
-                  >Live Link</a
-                >
-                <a
-                  href="https://github.com/chunowitzki/chunowitzki-movies"
-                  class="btn btn--med btn--theme-inv project-details__links-btn"
-                  target="_blank"
-                  >Code Link</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/img/tenzies.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Tenzies App</h3>
-              <p class="projects__row-content-desc">
-                Tenzies App is a simple fun game that allows the user to roll the dice until all the numbers are the same. It's built with functional React components. 
-              </p>
-              <div class="project-details__links">
-                <h3 class="project-details__content-title">See Live</h3>
-                <a
-                  href="https://chunowitzki-tenzies.netlify.app/"
-                  class="btn btn--med btn--theme project-details__links-btn"
-                  target="_blank"
-                  >Live Link</a
-                >
-                <a
-                  href="https://github.com/chunowitzki/Tenzies"
-                  class="btn btn--med btn--theme-inv project-details__links-btn"
-                  target="_blank"
-                  >Code Link</a
-                >
-              </div>
-            </div>
-          </div>
-
-
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/img/color-scheme-img.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Color Scheme Picker</h3>
-              <p class="projects__row-content-desc">
-                Color Scheme Picker is an app that allows users to input a specific color and what type of color scheme they would like to see for the specified color. Built with React and Color API. 
-              </p>
-              <div class="project-details__links">
-                <h3 class="project-details__content-title">See Live</h3>
-                <a
-                  href="https://chunowitzki-color-scheme-generator.netlify.app/"
-                  class="btn btn--med btn--theme project-details__links-btn"
-                  target="_blank"
-                  >Live Link</a
-                >
-                <a
-                  href="https://github.com/chunowitzki/Color-Scheme-Generator"
-                  class="btn btn--med btn--theme-inv project-details__links-btn"
-                  target="_blank"
-                  >Code Link</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/img/password.jpg"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Password Generator</h3>
-              <p class="projects__row-content-desc">
-                An app that generates random passwords based on a few user inputs, 
-                e.g. length, types of characters, etc. Built with HTML, CSS, and vanilla JavaScript.
-              </p>
-              <div class="project-details__links">
-                <h3 class="project-details__content-title">See Live</h3>
-                <a
-                  href="https://chunowitzki-password-generator.netlify.app/"
-                  class="btn btn--med btn--theme project-details__links-btn"
-                  target="_blank"
-                  >Live Link</a
-                >
-                <a
-                  href="https://github.com/chunowitzki/Password-Generator"
-                  class="btn btn--med btn--theme-inv project-details__links-btn"
-                  target="_blank"
-                  >Code Link</a
-                >
-              </div>
-            </div>
-          </div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <p class="about-text">Hi, I'm <strong>John Chun</strong> — a fullstack developer based out of Orange County, CA. I love building apps that solve real-world problems, and that are delightful to use. g <strong>refined digital experiences</strong> that balance aesthetics with purpose.</p>
+      <p class="about-text">I learned the art of selling in my previous sales roles. I learned interpersonal communication and relationship building skills as well as leadership skills in my previous non-profit work. I'm currently learning how to build and problem solve with modern web technologies. I believe in life-long learning and continuous growth. I love running, going to the gym, and playing golf in my free time. </p>
+      <div class="skills-row">
+        <div class="skill-item">
+          <span class="skill-name">Next.js</span>
+          <div class="skill-track"><div class="skill-fill" data-w="1"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">React.js</span>
+          <div class="skill-track"><div class="skill-fill" data-w="1"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Postgresql</span>
+          <div class="skill-track"><div class="skill-fill" data-w="1"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Node.js</span>
+          <div class="skill-track"><div class="skill-fill" data-w="1"></div></div>
         </div>
       </div>
-    </section>
-    
-    
-    
-    <section id="about" class="about sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main">About Me</span>
-          <span class="heading-sec__sub">
-            <p>I'm a frontend developer based out of Orange County, CA. I love building apps that solve real-world problems, and that are delightful to use. My specialities include JavaScript, React JS, and Tailwind CSS.
-            </p>
-          </span>
-        </h2>
-        <div class="about__content">
-          <div class="about__content-main">
-            <h3 class="about__content-title">Get to know me!</h3>
-            <div class="about__content-details">
-              <p class="about__content-details-para">
-                My background is in teaching, working with youth and organizational leadership. I have a Masters degree in Divinity from Biola University. When I'm not coding, I love going to the gym and playing golf. I ran my first marathon in March! 
-              </p>
-            </div>
-            <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
-              >Contact</a
-            >
-          </div>
-          <div class="about__content-skills">
-            <h3 class="about__content-title">My Skills</h3>
-            <div class="skills">
-              <div class="skills__skill">HTML</div>
-              <div class="skills__skill">CSS</div>
-              <div class="skills__skill">JavaScript</div>
-              <div class="skills__skill">React.js</div>
-              <div class="skills__skill">Express.js</div>
-              <div class="skills__skill">MongoDB</div>
-              <div class="skills__skill">Tailwind CSS</div>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section id="contact" class="contact sec-pad dynamicBg">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
-          <span class="heading-sec__sub heading-sec__sub--lt">
-            Please reach out if you have any questions! Send me an email at johnchun90@gmail.com
-          </span>
-        </h2>
-          <div class="main-footer__social-cont">
-            <a target="_blank" rel="noreferrer" href="#">
-              <img
-                class="main-footer__icon"
-                src="./assets/img/linkedin-ico.png"
-                alt="icon"
-              />
-            </a>
-            <a target="_blank" rel="noreferrer" href="https://github.com/chunowitzki">
-              <img
-                class="main-footer__icon"
-                src="./assets/img/github-ico.png"
-                alt="icon"
-              />
-            </a>
-            <a target="_blank" rel="noreferrer" href="">
-              <img
-                class="main-footer__icon main-footer__icon--mr-none"
-                src="./assets/img/insta-ico.png"
-                alt="icon"
-              />
-            </a>
-          </div>
-      </div>
-    </section>
-    <footer class="main-footer">
-      <div class="main-container">
-        <div class="main-footer__upper">
-          
-          
-        </div>
+    </div>
+  </div>
+</section>
 
-       
+<!-- WORKS -->
+<section class="works" id="works">
+  <p class="section-label reveal">Selected Works</p>
+  <h2 class="section-title reveal reveal-delay-1">Recent Projects</h2>
+  <div class="works-grid reveal reveal-delay-2">
+    <div class="work-card">
+      <div class="work-thumb"><img class="work-image" src="./assets/joaz.png" alt="JoAz App" /></div>
+      <div class="work-body">
+        <span class="work-tag">Next.js · React · Supabase </span>
+        <div class="work-name">JoAz App</div>
+        <div class="work-desc">To-Do app to help my partner and I organize different food to eat, dates to go on, and things to watch</div>
+        <a href="https://jo-az.vercel.app/food" class="work-link">View Project →</a>
       </div>
-    </footer>
+    </div>
+    <div class="work-card">
+      <div class="work-thumb"><img class="work-image" src="./assets/chun-notes-BKLj6piR.png" alt="Sticky Notes App" width=100%/></div>
+      <div class="work-body">
+        <span class="work-tag">React · Express.js · MongoDB</span>
+        <div class="work-name">Sticky Notes App</div>
+        <div class="work-desc">Sticky notes app is a fullstack application that lets users create, view, update, and delete notes. It displays the notes in a fun colorful sticky notes format. It's built with React, Express.js, and MongoDB</div>
+        <a href="https://chun-notes-app.netlify.app/" class="work-link">View Project →</a>
+      </div>
+    </div>
+    <div class="work-card">
+      <div class="work-thumb"><img class="work-image" src="./assets/movies-img-Dq8JNDWu.png" alt="Movies App" width=100%/></div>
+      <div class="work-body">
+        <span class="work-tag">React</span>
+        <div class="work-name">Movies App</div>
+        <div class="work-desc">Movies App is a simple movie searching app that lets you add movies to a watchlist. It's built with functional React components.</div>
+        <a href="https://chunowitzki-movies.netlify.app/" class="work-link">View Project →</a>
+      </div>
+    </div>
+    <div class="work-card">
+      <div class="work-thumb"><img class="work-image" src="./assets/color-scheme-img-CEKhNk05.png" alt="Color Scheme Generator" width=100%/></div>
+      <div class="work-body">
+        <span class="work-tag">React</span>
+        <div class="work-name">Color Scheme Generator</div>
+        <div class="work-desc">Color Scheme Picker is an app that allows users to input a specific color and what type of color scheme they would like to see for the specified color. Built with React and Color API.</div>
+        <a href="https://chunowitzki-color-scheme-generator.netlify.app/" class="work-link">View Project →</a>
+      </div>
+    </div>
+    <div class="work-card">
+      <div class="work-thumb"><img class="work-image" src="./assets/tenzies-D7T1SGb-.png" alt="Tenzies App" width=100%/></div>
+      <div class="work-body">
+        <span class="work-tag">React</span>
+        <div class="work-name">Tenzies</div>
+        <div class="work-desc">Tenzies App is a simple fun game that allows the user to roll the dice until all the numbers are the same. It's built with functional React components.</div>
+        <a href="https://chunowitzki-tenzies.netlify.app/" class="work-link">View Project →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script src="./index.js"></script>
-  </body>
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-wrap">
+
+  <!-- Header -->
+  <div class="contact-header">
+    <div class="contact-tag">Get In Touch</div>
+    <h1>Let's work <em>together</em></h1>
+  </div>
+
+  <!-- Icon buttons -->
+  <div class="icon-row">
+
+    <!-- Email -->
+    <a href="mailto:johnchun90@gmail.com" class="icon-btn" data-label="Email">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="4" width="20" height="16" rx="3"/>
+        <polyline points="2,4 12,13 22,4"/>
+      </svg>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/johnchun-codes/" target="_blank" class="icon-btn" data-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="4"/>
+        <line x1="8" y1="11" x2="8" y2="17"/>
+        <line x1="8" y1="7" x2="8" y2="8"/>
+        <path d="M12 17v-4a2 2 0 0 1 4 0v4"/>
+        <line x1="12" y1="11" x2="12" y2="17"/>
+      </svg>
+    </a>
+
+    <!-- GitHub -->
+    <a href="https://github.com/chunowitzki" target="_blank" class="icon-btn" data-label="GitHub">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+      </svg>
+    </a>
+
+  </div>
+
+  <!-- Divider -->
+  <div class="divider">or send a message</div>
+
+  <!-- Form -->
+  <form class="contact-form" onsubmit="handleSubmit(event)">
+    <div class="form-field">
+      <label>Your Name</label>
+      <input type="text" placeholder="Alex Smith">
+    </div>
+    <div class="form-field">
+      <label>Email Address</label>
+      <input type="email" placeholder="hello@example.com">
+    </div>
+    <div class="form-field">
+      <label>Message</label>
+      <textarea placeholder="Tell me about your project..."></textarea>
+    </div>
+    <button type="submit" class="btn-submit">Send Message</button>
+  </form>
+
+</div>
+
+</section>
+
+
+<script>
+  const EMAILJS_PUBLIC_KEY  = 'pLQHy-I-FeNHOuZ-H';   // Account > API Keys
+  const EMAILJS_SERVICE_ID  = 'service_ncuoij1';   // Email Services tab
+  const EMAILJS_TEMPLATE_ID = 'template_njo3a1a';  // Email Templates tab
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40));
+
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      entry.target.querySelectorAll('.skill-fill').forEach(fill => {
+        const w = parseFloat(fill.dataset.w || 0.8);
+        fill.style.width = (w * 100) + '%';
+        setTimeout(() => fill.classList.add('animated'), 80);
+      });
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Pre-set widths for CSS transition
+  document.querySelectorAll('.skill-fill').forEach(fill => {
+    fill.style.width = (parseFloat(fill.dataset.w) * 100) + '%';
+  });
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.btn-submit');
+    btn.textContent = 'Message Sent ✓';
+    btn.style.background = '#AAA5C6';
+    setTimeout(() => { btn.textContent = 'Send Message'; btn.style.background = ''; e.target.reset(); }, 3000);
+  }
+</script>
+</body>
 </html>
