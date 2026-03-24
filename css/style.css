@@ -83,7 +83,7 @@ nav.scrolled { border-bottom-color: var(--border); box-shadow: 0 2px 24px rgba(0
 .hero h1 em { font-style: italic; color: var(--sage); }
 
 .hero-sub {
-  margin-top: 32px; font-size: 16px; color: var(--muted);
+  margin-top: 32px; font-size: 20px; color: var(--muted);
   max-width: 44ch; font-weight: 300; line-height: 1.8;
   opacity: 0; animation: fadeUp 0.9s 0.5s forwards;
 }
