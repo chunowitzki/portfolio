@@ -63,6 +63,16 @@
   <h2 class="display reveal">Selected Works</h2>
   <div class="works-grid reveal">
 
+    <a class="work-card" href="https://cinematch-chun.netlify.app/" target="_blank" rel="noopener">
+          <div class="work-thumb"><img src="./assets/IMG_2252.jpg" alt="CineMatch screenshot" class="work-image"></div>
+          <div class="work-body">
+            <div class="work-name">CineMatch</div>
+            <div class="work-tag">React · Express.js</div>
+            <p class="work-desc">No more endless scrolling to figure out what to watch! A movie recommendation app that helps users discover films based on their preferences.</p>
+            <span class="work-link">View project →</span>
+          </div>
+    </a>
+
     <a class="work-card" href="https://jo-az.vercel.app/food" target="_blank" rel="noopener">
       <div class="work-thumb"><img src="./assets/joaz.png" alt="JoAz App screenshot"></div>
       <div class="work-body">
@@ -73,15 +83,7 @@
       </div>
     </a>
 
-    <a class="work-card" href="https://cinematch-chun.netlify.app/" target="_blank" rel="noopener">
-      <div class="work-thumb"><img src="./assets/IMG_2252.jpg" alt="CineMatch screenshot"></div>
-      <div class="work-body">
-        <div class="work-name">CineMatch</div>
-        <div class="work-tag">React · Express.js</div>
-        <p class="work-desc">No more endless scrolling to figure out what to watch! A movie recommendation app that helps users discover films based on their preferences.</p>
-        <span class="work-link">View project →</span>
-      </div>
-    </a>
+   
 
     <a class="work-card" href="https://chunowitzki-tenzies.netlify.app/" target="_blank" rel="noopener">
       <div class="work-thumb"><img src="./assets/tenzies-D7T1SGb-.png" alt="Tenzies game screenshot"></div>
@@ -163,9 +165,7 @@
       <p>I'd love to hear about your project, team, or idea.</p>
       <p>Drop me a message, or find me on any of these:</p>
       <div class="icon-row">
-        <a href="mailto:johnchun90@gmail.com" class="icon-btn" aria-label="Email">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><polyline points="2,4 12,13 22,4"/></svg>
-        </a>
+       
         <a href="https://www.linkedin.com/in/johnchun-codes/" target="_blank" rel="noopener" class="icon-btn" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="4"/><line x1="8" y1="11" x2="8" y2="17"/><line x1="8" y1="7" x2="8" y2="8"/><path d="M12 17v-4a2 2 0 0 1 4 0v4"/><line x1="12" y1="11" x2="12" y2="17"/></svg>
         </a>
@@ -193,17 +193,18 @@
       <form class="contact-form" onsubmit="handleSubmit(event)">
         <div class="form-field">
           <label for="f-name">Name</label>
-          <input id="f-name" type="text" placeholder="Alex Smith">
+          <input id="f-name" name="name" type="text" placeholder="Alex Smith" required>
         </div>
         <div class="form-field">
           <label for="f-email">Email address</label>
-          <input id="f-email" type="email" placeholder="hello@example.com">
+          <input id="f-email" name="email" type="email" placeholder="hello@example.com" required>
         </div>
         <div class="form-field">
           <label for="f-msg">Message</label>
-          <textarea id="f-msg" placeholder="Tell me about your project..."></textarea>
+          <textarea id="f-msg" name="message" placeholder="Tell me about your project..." required></textarea>
         </div>
         <button type="submit" class="pill btn-submit">Send message</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
       </form>
       <p class="form-note">Or email me directly at johnchun90@gmail.com</p>
     </div>
@@ -213,6 +214,7 @@
 
 <footer>© 2026 John Chun</footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
 <script>
   const EMAILJS_PUBLIC_KEY  = 'pLQHy-I-FeNHOuZ-H';   // Account > API Keys
   const EMAILJS_SERVICE_ID  = 'service_ncuoij1';   // Email Services tab
@@ -228,12 +230,41 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  function handleSubmit(e) {
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+  async function handleSubmit(e) {
     e.preventDefault();
-    const btn = e.target.querySelector('.btn-submit');
-    btn.textContent = 'Message sent ✓';
-    btn.style.background = 'var(--blue)';
-    setTimeout(() => { btn.textContent = 'Send message'; btn.style.background = ''; e.target.reset(); }, 3000);
+    const form   = e.target;
+    const btn    = form.querySelector('.btn-submit');
+    const status = form.querySelector('.form-status');
+    const data   = Object.fromEntries(new FormData(form));
+
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    status.textContent = '';
+    status.className = 'form-status';
+
+    try {
+      // Several common variable names, so the existing EmailJS template
+      // picks them up whichever ones it uses.
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        name: data.name,       from_name: data.name,
+        email: data.email,     from_email: data.email, reply_to: data.email,
+        message: data.message,
+        title: `Portfolio message from ${data.name}`,
+      });
+      btn.textContent = 'Message sent ✓';
+      btn.style.background = 'var(--blue)';
+      status.textContent = "Thanks! I'll get back to you soon.";
+      form.reset();
+      setTimeout(() => { btn.textContent = 'Send message'; btn.style.background = ''; btn.disabled = false; }, 3000);
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      btn.textContent = 'Send message';
+      btn.disabled = false;
+      status.textContent = 'Something went wrong. Please email me directly at johnchun90@gmail.com.';
+      status.classList.add('is-error');
+    }
   }
 </script>
 </body>
