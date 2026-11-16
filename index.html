@@ -4,8 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>John Chun — Portfolio</title>
+<meta name="description" content="John Chun — fullstack developer in Orange County, CA building web apps with clean UI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@800;900&family=Gaegu:wght@400;700&family=Lexend:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -13,128 +15,158 @@
 <!-- NAV -->
 <nav id="nav">
   <a href="#" class="nav-logo">John Chun</a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#about">About</a></li>
+  <ul class="nav-links">
     <li><a href="#works">Works</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-deco"></div>
-  <div class="hero-deco2"></div>
-  <div class="hero-deco3"></div>
-  <h1><em>Fullstack Developer</em></h1>
-  <!-- <h2 class="hero-sub">focused on clean UI</h2> -->
-  <p class="hero-sub">I build web apps with clean UI</p>
-  <div class="hero-cta">
-    <a href="#works" class="btn-primary">View My Work</a>
-    <a href="#contact" class="btn-ghost">Get in Touch</a>
-  </div>
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    Scroll
+<header class="hero">
+  <h1 class="display">John Chun</h1>
+  <p class="hero-sub">A fullstack developer who builds web apps with clean, delightful UI.</p>
+  <a href="#contact" class="pill">Get in touch</a>
+
+  <!-- walking line-art crew: laptop, coffee mug, code window -->
+  <svg class="hero-art" viewBox="0 0 290 175" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <g class="walk">
+      <rect x="18" y="22" width="60" height="42" rx="5"/>
+      <rect x="24" y="28" width="48" height="30" rx="2"/>
+      <path d="M12 64h72l-7 9H19z"/>
+      <path d="M38 40v4M58 40v4M42 50q6 4 12 0"/>
+      <path d="M36 73l-10 82M60 73l10 82"/>
+      <path d="M20 156h12M70 156h12" stroke-width="5"/>
+    </g>
+    <g class="walk">
+      <path d="M118 44h48v48a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9z"/>
+      <path d="M166 56c15 0 15 28 0 28"/>
+      <path d="M119 62h46v30a8 8 0 0 1-8 8h-30a8 8 0 0 1-8-8z" fill="currentColor" stroke="none" opacity=".9"/>
+      <path d="M132 34c-4-6 4-8 0-14M146 34c-4-6 4-8 0-14"/>
+      <path d="M134 50v3M150 50v3"/>
+      <path d="M131 101l-9 54M153 101l9 54"/>
+      <path d="M116 156h12M158 156h12" stroke-width="5"/>
+    </g>
+    <g class="walk">
+      <rect x="204" y="30" width="66" height="58" rx="5"/>
+      <path d="M204 42h66"/>
+      <circle cx="211" cy="36" r="1.5"/><circle cx="217" cy="36" r="1.5"/><circle cx="223" cy="36" r="1.5"/>
+      <path d="M226 56l-9 9 9 9M248 56l9 9-9 9M241 53l-8 24"/>
+      <path d="M224 88l-10 67M250 88l10 67"/>
+      <path d="M208 156h12M256 156h12" stroke-width="5"/>
+    </g>
+  </svg>
+</header>
+
+<!-- WORKS -->
+<section class="works" id="works">
+  <h2 class="display reveal">Selected Works</h2>
+  <div class="works-grid reveal">
+
+    <a class="work-card" href="https://jo-az.vercel.app/food" target="_blank" rel="noopener">
+      <div class="work-thumb"><img src="./assets/joaz.png" alt="JoAz App screenshot"></div>
+      <div class="work-body">
+        <div class="work-name">JoAz App</div>
+        <div class="work-tag">Next.js · Supabase</div>
+        <p class="work-desc">A shared to-do app that helps my partner and me organize food to eat, dates to go on, and things to watch.</p>
+        <span class="work-link">View project →</span>
+      </div>
+    </a>
+
+    <a class="work-card" href="https://chun-notes-app.netlify.app/" target="_blank" rel="noopener">
+      <div class="work-thumb"><img src="./assets/chun-notes-BKLj6piR.png" alt="Sticky Notes App screenshot"></div>
+      <div class="work-body">
+        <div class="work-name">Sticky Notes App</div>
+        <div class="work-tag">React · Express · MongoDB</div>
+        <p class="work-desc">A fullstack app to create, view, update, and delete notes, displayed in a fun, colorful sticky-note format.</p>
+        <span class="work-link">View project →</span>
+      </div>
+    </a>
+
+    <a class="work-card" href="https://chunowitzki-color-scheme-generator.netlify.app/" target="_blank" rel="noopener">
+      <div class="work-thumb"><img src="./assets/color-scheme-img-CEKhNk05.png" alt="Color Scheme Generator screenshot"></div>
+      <div class="work-body">
+        <div class="work-name">Color Scheme Generator</div>
+        <div class="work-tag">React · Color API</div>
+        <p class="work-desc">Pick a color and a scheme type, and get a matching palette back. Built with React and the Color API.</p>
+        <span class="work-link">View project →</span>
+      </div>
+    </a>
+
+    <a class="work-card" href="https://chunowitzki-tenzies.netlify.app/" target="_blank" rel="noopener">
+      <div class="work-thumb"><img src="./assets/tenzies-D7T1SGb-.png" alt="Tenzies game screenshot"></div>
+      <div class="work-body">
+        <div class="work-name">Tenzies</div>
+        <div class="work-tag">React</div>
+        <p class="work-desc">A simple, fun dice game: keep rolling until every die shows the same number. Built with functional React components.</p>
+        <span class="work-link">View project →</span>
+      </div>
+    </a>
+
   </div>
 </section>
 
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="about-inner">
-    <div>
-      <p class="section-label reveal">About Me</p>
-      <h2 class="section-title reveal reveal-delay-1">A developer who builds things he'd actually use</h2>
-      <div class="about-stats reveal reveal-delay-2">
-        <!-- <div class="stat-card">
-          <div class="stat-num">5+</div>
-          <div class="stat-label">Years Exp.</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">40+</div>
-          <div class="stat-label">Projects</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">18</div>
-          <div class="stat-label">Clients</div>
-        </div>
-      </div> -->
-    </div>
-    <div class="reveal reveal-delay-1">
-      <p class="about-text">Hi, I'm <strong>John Chun</strong> — a fullstack developer based out of Orange County, CA. I love building apps that solve real-world problems, and that are delightful to use.
-      <p class="about-text">I learned the art of selling in my previous sales roles. I learned interpersonal communication and relationship building skills as well as leadership skills in my previous non-profit work. I'm currently learning how to build and problem solve with modern web technologies. I believe in life-long learning and continuous growth. I love running, going to the gym, and playing golf in my free time. </p>
-      <div class="skills-row">
-        <div class="skill-item">
-          <span class="skill-name">Next.js</span>
-          <div class="skill-track"><div class="skill-fill" data-w="1"></div></div>
-        </div>
-        <div class="skill-item">
-          <span class="skill-name">React.js</span>
-          <div class="skill-track"><div class="skill-fill" data-w="1"></div></div>
-        </div>
-        <div class="skill-item">
-          <span class="skill-name">Postgresql</span>
-          <div class="skill-track"><div class="skill-fill" data-w="1"></div></div>
-        </div>
-        <div class="skill-item">
-          <span class="skill-name">Node.js</span>
-          <div class="skill-track"><div class="skill-fill" data-w="1"></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="tiles reveal">
 
-<!-- WORKS -->
-<section class="works" id="works">
-  <p class="section-label reveal">Selected Works</p>
-  <h2 class="section-title reveal reveal-delay-1">Recent Projects</h2>
-  <div class="works-grid reveal reveal-delay-2">
-    <div class="work-card">
-      <div class="work-thumb"><img class="work-image" src="./assets/joaz.png" alt="JoAz App" /></div>
-      <div class="work-body">
-        <span class="work-tag">Next.js · React · Supabase </span>
-        <div class="work-name">JoAz App</div>
-        <div class="work-desc">To-Do app to help my partner and I organize different food to eat, dates to go on, and things to watch</div>
-        <a href="https://jo-az.vercel.app/food" class="work-link">View Project →</a>
+      <div class="tile">
+        <svg class="tile-icon" viewBox="0 0 76 64" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="38" cy="22" r="14"/>
+          <path d="M31 19v2M45 19v2M32 28q6 5 12 0"/>
+          <path d="M26 12q6-8 14-4 8-6 12 4"/>
+          <path d="M14 62q2-20 24-20t24 20"/>
+        </svg>
+        <h3 class="display">About<br>Me</h3>
+        <p>Hi, I'm John — a fullstack developer in Orange County, CA. I love building apps that solve real problems and are delightful to use.</p>
+        <p style="margin-top:10px">Sales taught me to sell; non-profit work taught me communication, relationships and leadership.</p>
       </div>
+
+      <div class="tile tile--coral">
+        <svg class="tile-icon" viewBox="0 0 76 64" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="12" y="10" width="52" height="34" rx="4"/>
+          <path d="M4 44h68l-5 8H9z"/>
+          <path d="M30 22l-6 5 6 5M46 22l6 5-6 5M41 19l-6 16"/>
+        </svg>
+        <h3 class="display">Dev<br>Toolkit</h3>
+        <ul>
+          <li>Next.js – <b>full-stack</b></li>
+          <li>React.js – <b>UI</b></li>
+          <li>Node.js &amp; Express – <b>APIs</b></li>
+          <li>PostgreSQL &amp; MongoDB – <b>data</b></li>
+        </ul>
+      </div>
+
+      <div class="tile">
+        <svg class="tile-icon" viewBox="0 0 76 64" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M30 58V8"/>
+          <path d="M30 8l22 8-22 8"/>
+          <ellipse cx="34" cy="58" rx="22" ry="4"/>
+          <circle cx="50" cy="52" r="3.5"/>
+          <path d="M60 6l2-4M66 12l4-2M64 20h4"/>
+        </svg>
+        <h3 class="display">Off the<br>Clock</h3>
+        <ul>
+          <li>Running</li>
+          <li>Hitting the gym</li>
+          <li>Playing golf</li>
+          <li>Life-long learning – <b>always</b></li>
+        </ul>
+      </div>
+
     </div>
-    <div class="work-card">
-      <div class="work-thumb"><img class="work-image" src="./assets/chun-notes-BKLj6piR.png" alt="Sticky Notes App" width=100%/></div>
-      <div class="work-body">
-        <span class="work-tag">React · Express.js · MongoDB</span>
-        <div class="work-name">Sticky Notes App</div>
-        <div class="work-desc">Sticky notes app is a fullstack application that lets users create, view, update, and delete notes. It displays the notes in a fun colorful sticky notes format. It's built with React, Express.js, and MongoDB</div>
-        <a href="https://chun-notes-app.netlify.app/" class="work-link">View Project →</a>
-      </div>
-    </div>
-    <!-- <div class="work-card">
-      <div class="work-thumb"><img class="work-image" src="./assets/movies-img-Dq8JNDWu.png" alt="Movies App" width=100%/></div>
-      <div class="work-body">
-        <span class="work-tag">React</span>
-        <div class="work-name">Movies App</div>
-        <div class="work-desc">Movies App is a simple movie searching app that lets you add movies to a watchlist. It's built with functional React components.</div>
-        <a href="https://chunowitzki-movies.netlify.app/" class="work-link">View Project →</a>
-      </div>
-    </div> -->
-    <div class="work-card">
-      <div class="work-thumb"><img class="work-image" src="./assets/color-scheme-img-CEKhNk05.png" alt="Color Scheme Generator" width=100%/></div>
-      <div class="work-body">
-        <span class="work-tag">React</span>
-        <div class="work-name">Color Scheme Generator</div>
-        <div class="work-desc">Color Scheme Picker is an app that allows users to input a specific color and what type of color scheme they would like to see for the specified color. Built with React and Color API.</div>
-        <a href="https://chunowitzki-color-scheme-generator.netlify.app/" class="work-link">View Project →</a>
-      </div>
-    </div>
-    <div class="work-card">
-      <div class="work-thumb"><img class="work-image" src="./assets/tenzies-D7T1SGb-.png" alt="Tenzies App" width=100%/></div>
-      <div class="work-body">
-        <span class="work-tag">React</span>
-        <div class="work-name">Tenzies</div>
-        <div class="work-desc">Tenzies App is a simple fun game that allows the user to roll the dice until all the numbers are the same. It's built with functional React components.</div>
-        <a href="https://chunowitzki-tenzies.netlify.app/" class="work-link">View Project →</a>
+
+    <div class="info-card reveal">
+      <h2 class="display">John Chun</h2>
+      <div class="info-cols">
+        <div>Fullstack Developer<br>Orange County, CA</div>
+        <div>
+          Email: <a href="mailto:johnchun90@gmail.com">johnchun90@gmail.com</a><br>
+          LinkedIn: <a href="https://www.linkedin.com/in/johnchun-codes/" target="_blank" rel="noopener">johnchun-codes</a><br>
+          GitHub: <a href="https://github.com/chunowitzki" target="_blank" rel="noopener">@chunowitzki</a>
+        </div>
+        <div>Currently building with<br>Next.js + Supabase</div>
       </div>
     </div>
   </div>
@@ -142,69 +174,62 @@
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
-  <div class="contact-wrap">
+  <div class="contact-inner">
 
-  <!-- Header -->
-  <div class="contact-header">
-    <div class="contact-tag">Get In Touch</div>
-    <h1>Let's work <em>together</em></h1>
+    <div class="contact-card reveal">
+      <h2 class="display">Let's Work Together</h2>
+      <p>I'd love to hear about your project, team, or idea.</p>
+      <p>Drop me a message, or find me on any of these:</p>
+      <div class="icon-row">
+        <a href="mailto:johnchun90@gmail.com" class="icon-btn" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><polyline points="2,4 12,13 22,4"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/johnchun-codes/" target="_blank" rel="noopener" class="icon-btn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="4"/><line x1="8" y1="11" x2="8" y2="17"/><line x1="8" y1="7" x2="8" y2="8"/><path d="M12 17v-4a2 2 0 0 1 4 0v4"/><line x1="12" y1="11" x2="12" y2="17"/></svg>
+        </a>
+        <a href="https://github.com/chunowitzki" target="_blank" rel="noopener" class="icon-btn" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+      </div>
+
+      <!-- line-art: laptop + coffee on a desk -->
+      <svg class="contact-art" viewBox="0 0 230 140" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="30" y="30" width="110" height="72" rx="6"/>
+        <rect x="38" y="38" width="94" height="56" rx="3"/>
+        <path d="M85 76c-12-8-16-14-16-19a7 7 0 0 1 16-3 7 7 0 0 1 16 3c0 5-4 11-16 19z"/>
+        <path d="M18 102h134l-10 12H28z"/>
+        <path d="M168 78h30v28a6 6 0 0 1-6 6h-18a6 6 0 0 1-6-6z"/>
+        <path d="M198 86c10 0 10 16 0 16"/>
+        <path d="M176 70c-3-5 3-6 0-11M188 70c-3-5 3-6 0-11"/>
+        <path d="M0 122h230"/>
+        <path d="M14 122v18M216 122v18"/>
+      </svg>
+    </div>
+
+    <div class="form-card reveal">
+      <h3>Send a Message</h3>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-field">
+          <label for="f-name">Name</label>
+          <input id="f-name" type="text" placeholder="Alex Smith">
+        </div>
+        <div class="form-field">
+          <label for="f-email">Email address</label>
+          <input id="f-email" type="email" placeholder="hello@example.com">
+        </div>
+        <div class="form-field">
+          <label for="f-msg">Message</label>
+          <textarea id="f-msg" placeholder="Tell me about your project..."></textarea>
+        </div>
+        <button type="submit" class="pill btn-submit">Send message</button>
+      </form>
+      <p class="form-note">Or email me directly at johnchun90@gmail.com</p>
+    </div>
+
   </div>
-
-  <!-- Icon buttons -->
-  <div class="icon-row">
-
-    <!-- Email -->
-    <a href="mailto:johnchun90@gmail.com" class="icon-btn" data-label="Email">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="2" y="4" width="20" height="16" rx="3"/>
-        <polyline points="2,4 12,13 22,4"/>
-      </svg>
-    </a>
-
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/johnchun-codes/" target="_blank" class="icon-btn" data-label="LinkedIn">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="2" y="2" width="20" height="20" rx="4"/>
-        <line x1="8" y1="11" x2="8" y2="17"/>
-        <line x1="8" y1="7" x2="8" y2="8"/>
-        <path d="M12 17v-4a2 2 0 0 1 4 0v4"/>
-        <line x1="12" y1="11" x2="12" y2="17"/>
-      </svg>
-    </a>
-
-    <!-- GitHub -->
-    <a href="https://github.com/chunowitzki" target="_blank" class="icon-btn" data-label="GitHub">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-      </svg>
-    </a>
-
-  </div>
-
-  <!-- Divider -->
-  <div class="divider">or send a message</div>
-
-  <!-- Form -->
-  <form class="contact-form" onsubmit="handleSubmit(event)">
-    <div class="form-field">
-      <label>Your Name</label>
-      <input type="text" placeholder="Alex Smith">
-    </div>
-    <div class="form-field">
-      <label>Email Address</label>
-      <input type="email" placeholder="hello@example.com">
-    </div>
-    <div class="form-field">
-      <label>Message</label>
-      <textarea placeholder="Tell me about your project..."></textarea>
-    </div>
-    <button type="submit" class="btn-submit">Send Message</button>
-  </form>
-
-</div>
-
 </section>
 
+<footer>© 2026 John Chun</footer>
 
 <script>
   const EMAILJS_PUBLIC_KEY  = 'pLQHy-I-FeNHOuZ-H';   // Account > API Keys
@@ -214,36 +239,19 @@
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40));
 
-  const hamburger = document.getElementById('hamburger');
-  const navLinks  = document.getElementById('navLinks');
-  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('visible');
-      entry.target.querySelectorAll('.skill-fill').forEach(fill => {
-        const w = parseFloat(fill.dataset.w || 0.8);
-        fill.style.width = (w * 100) + '%';
-        setTimeout(() => fill.classList.add('animated'), 80);
-      });
+      if (entry.isIntersecting) entry.target.classList.add('visible');
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Pre-set widths for CSS transition
-  document.querySelectorAll('.skill-fill').forEach(fill => {
-    fill.style.width = (parseFloat(fill.dataset.w) * 100) + '%';
-  });
 
   function handleSubmit(e) {
     e.preventDefault();
     const btn = e.target.querySelector('.btn-submit');
-    btn.textContent = 'Message Sent ✓';
-    btn.style.background = '#AAA5C6';
-    setTimeout(() => { btn.textContent = 'Send Message'; btn.style.background = ''; e.target.reset(); }, 3000);
+    btn.textContent = 'Message sent ✓';
+    btn.style.background = 'var(--blue)';
+    setTimeout(() => { btn.textContent = 'Send message'; btn.style.background = ''; e.target.reset(); }, 3000);
   }
 </script>
 </body>
